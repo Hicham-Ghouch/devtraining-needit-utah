@@ -1,25 +1,50 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<database>
-    <element audit="true" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
-        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" db_object_id="0bf3668993009b1097dc70aefaba1026" extends="task" label="NeedIt" max_length="40" name="x_58872_needit_needit" type="collection">
         <element label="Requested for" mandatory="true" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
-        <element attributes="edge_encryption_enabled=true" label="Requested for email" mandatory="true" max_length="40" name="u_requested_for_email" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="legal" label="Request type" mandatory="true" max_length="40" name="u_request_type" type="string">
             <choice>
-                <element label="Human Resources" sequence="0" value="hr"/>
-                <element label="Facilities" sequence="1" value="facilities"/>
-                <element label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Docking station for new workstation" sequence="0" value="Docking station for new workstation"/>
+                <element inactive_on_update="false" label="Reset account password and unlock account" sequence="0" value="Reset account password and unlock account"/>
+                <element inactive_on_update="false" label="Zoom Pro license for client meetings" sequence="0" value="Zoom Pro license for client meetings"/>
+                <element inactive_on_update="false" label="Human Resources" sequence="0" value="hr"/>
+                <element inactive_on_update="false" label="Need a new laptop for onboarding" sequence="0" value="Need a new laptop for onboarding"/>
+                <element inactive_on_update="false" label="Hardware" sequence="0" value="Hardware"/>
+                <element inactive_on_update="false" label="Install Adobe Acrobat Pro license" sequence="0" value="Install Adobe Acrobat Pro license"/>
+                <element inactive_on_update="false" label="Access" sequence="0" value="Access"/>
+                <element inactive_on_update="false" label="Facilities" sequence="1" value="facilities"/>
+                <element inactive_on_update="false" label="Access to the Finance shared drive" sequence="0" value="Access to the Finance shared drive"/>
+                <element inactive_on_update="false" label="Replace broken company phone" sequence="0" value="Replace broken company phone"/>
+                <element inactive_on_update="false" label="Legal" sequence="2" value="legal"/>
+                <element inactive_on_update="false" label="Install Visio for process diagrams" sequence="0" value="Install Visio for process diagrams"/>
+                <element inactive_on_update="false" label="Need a second monitor for my desk" sequence="0" value="Need a second monitor for my desk"/>
+                <element inactive_on_update="false" label="Request VPN access for remote work" sequence="0" value="Request VPN access for remote work"/>
+                <element inactive="true" inactive_on_update="true" label="Developer Enablement" sequence="0" value="dev_enable"/>
+                <element inactive_on_update="false" label="Software" sequence="0" value="Software"/>
             </choice>
         </element>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Requested for email" mandatory="true" max_length="40" name="u_requested_for_email" type="string"/>
         <element attributes="edge_encryption_enabled=true" choice="3" default="hr1" label="What needed" mandatory="true" max_length="40" name="u_what_needed" type="string">
             <choice>
-                <element label="Human Resources 1" sequence="0" value="hr1"/>
-                <element label="Human Resources 2" sequence="1" value="hr2"/>
-                <element label="Facilities 1" sequence="2" value="facilities1"/>
-                <element label="Facilities 2" sequence="3" value="facilities2"/>
-                <element label="Legal 1" sequence="4" value="legal1"/>
-                <element label="Legal 2" sequence="5" value="legal2"/>
-                <element label="Other" sequence="6" value="other"/>
+                <element inactive_on_update="false" label="Password reset" sequence="0" value="Password reset"/>
+                <element inactive_on_update="false" label="Legal 1" sequence="4" value="legal1"/>
+                <element inactive_on_update="false" label="Adobe Acrobat Pro" sequence="0" value="Adobe Acrobat Pro"/>
+                <element inactive_on_update="false" label="VPN access" sequence="0" value="VPN access"/>
+                <element inactive_on_update="false" label="Zoom license" sequence="0" value="Zoom license"/>
+                <element inactive_on_update="false" label="Other" sequence="6" value="other"/>
+                <element inactive_on_update="false" label="Docking station" sequence="0" value="Docking station"/>
+                <element inactive_on_update="false" label="Human Resources 2" sequence="1" value="hr2"/>
+                <element inactive_on_update="false" label="Human Resources 1" sequence="0" value="hr1"/>
+                <element inactive_on_update="false" label="Legal 2" sequence="5" value="legal2"/>
+                <element inactive_on_update="false" label="Laptop" sequence="0" value="Laptop"/>
+                <element inactive_on_update="false" label="Microsoft Visio" sequence="0" value="Microsoft Visio"/>
+                <element inactive_on_update="false" label="Shared drive" sequence="0" value="Shared drive"/>
+                <element inactive_on_update="false" label="Mobile phone" sequence="0" value="Mobile phone"/>
+                <element inactive_on_update="false" label="Facilities 1" sequence="2" value="facilities1"/>
+                <element inactive="true" inactive_on_update="true" label="Your Department Choice 1" sequence="0" value="your_choice1"/>
+                <element inactive_on_update="false" label="External monitor" sequence="0" value="External monitor"/>
+                <element inactive_on_update="false" label="Facilities 2" sequence="3" value="facilities2"/>
+                <element inactive="true" inactive_on_update="true" label="Your Department Choice 2" sequence="1" value="your_choice2"/>
             </choice>
         </element>
         <element label="When needed" mandatory="true" max_length="40" name="u_when_needed" type="glide_date_time"/>
